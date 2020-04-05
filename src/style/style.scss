@@ -1,0 +1,47 @@
+.d-flex {
+  display: flex;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-items-center {
+  justify-items: center;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.header {
+  .brand-logo {
+    position: static;
+    font-size: 1.5rem;
+  }
+  .currency-select {
+    width: 100px;
+  }
+}
+
+.select-wrapper input.select-dropdown {
+  margin: 0;
+  border: none;
+  color: #fff;
+  &:focus {
+    border: none;
+  }
+}
+
+.select-wrapper .caret {
+  fill: #fff;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
