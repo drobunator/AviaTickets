@@ -38,10 +38,10 @@ module.exports = {
     contentBase: path.join(__dirname, "dist"),
     compress: true,
     port: 9000,
-    hot: !isDev,
+    liveReload: true,
+    hot: isDev,
     watchContentBase: true,
     overlay: true,
-    liveReload: true,
   },
   devtool: isDev ? "source-map" : "",
   optimization: optimization(),
@@ -55,7 +55,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin([
       {
-        from: path.resolve(__dirname, "src/favicon.png"),
+        from: path.resolve(__dirname, "src/favicon.ico"),
         to: path.resolve(__dirname, "dist"),
       },
     ]),
@@ -93,7 +93,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|gif|jpg|bmp|svg)$/,
+        test: /\.(png|gif|jpg|bmp|svg|ico)$/,
         use: ["file-loader"],
       },
     ],

@@ -1,8 +1,11 @@
 import "materialize-css/dist/css/materialize.min.css";
 import "materialize-css/dist/js/materialize.min.js";
 
-//Init select
+// Init dropdown
+const dropdowns = document.querySelectorAll(".dropdown-trigger");
+M.Dropdown.init(dropdowns);
 
+//Init select
 const select = document.querySelectorAll("select");
 M.FormSelect.init(select);
 
@@ -24,7 +27,7 @@ export function getAutocomleteInstance(elem) {
 const datepicker = document.querySelectorAll(".datepicker");
 M.Datepicker.init(datepicker, {
   showClearBtn: true,
-  format: "yyyy-mm-dd",
+  format: "yyyy-mm",
 });
 
 export function getDatePickerInstance(elem) {
